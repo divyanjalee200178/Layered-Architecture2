@@ -14,18 +14,18 @@ public class OrderBOImpl {
     }
 
 
-    public boolean save(OrderDTO dto) throws SQLException, ClassNotFoundException {
+   /* public boolean save(OrderDTO dto) throws SQLException, ClassNotFoundException {
         return false;
-    }
+    }*/
 
     public boolean existOrder(String orderId) throws SQLException, ClassNotFoundException {
         OrderDAO orderDAO=new OrderDAOImpl();
         return orderDAO.existOrder(orderId);
     }
 
-    public boolean saveOrder(OrderDTO dto) throws SQLException, ClassNotFoundException {
+    public boolean save(OrderDTO dto) throws SQLException, ClassNotFoundException {
         OrderDAO orderDAO=new OrderDAOImpl();
-        return orderDAO.saveOrder(dto);
+        return orderDAO.save(dto);
     }
 
 

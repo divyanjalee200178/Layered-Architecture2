@@ -21,9 +21,9 @@ public class OrderDAOImpl implements OrderDAO{
     }
 
     @Override
-    public boolean save(OrderDTO dto) throws SQLException, ClassNotFoundException {
+   /* public boolean save(OrderDTO dto) throws SQLException, ClassNotFoundException {
         return false;
-    }
+    }*/
 
     public boolean existOrder(String orderId) throws SQLException, ClassNotFoundException {
        /*Connection connection = DBConnection.getDbConnection().getConnection();
@@ -34,7 +34,7 @@ public class OrderDAOImpl implements OrderDAO{
         return rst.next();
     }
 
-    public boolean saveOrder(OrderDTO dto) throws SQLException, ClassNotFoundException {
+    public boolean save(OrderDTO dto) throws SQLException, ClassNotFoundException {
         /*Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement stm = connection.prepareStatement("INSERT INTO `Orders` (oid, date, customerID) VALUES (?,?,?)");
         stm.setString(1, dto.getOrderId());
